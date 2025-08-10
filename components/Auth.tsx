@@ -47,6 +47,7 @@ const Auth: React.FC<AuthProps> = ({ onLogin, isLoading, error }) => {
           className="w-full bg-slate-700 border border-slate-600 rounded-md px-4 py-3 text-slate-100 placeholder-slate-500 focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 focus:outline-none transition duration-200"
           disabled={isLoading}
           aria-label="GitHub Personal Access Token"
+          autoComplete="new-password"
         />
         <button
           type="submit"
