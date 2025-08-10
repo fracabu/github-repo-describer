@@ -32,16 +32,26 @@ To run this project locally, follow these steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/fracabu/github-repo-describer.git
     cd github-repo-describer
     ```
 
-2.  **Set up environment variables:**
-    You will need a Google Gemini API key. Create a file named `.env` in the root of the project and add your key:
+2.  **Install dependencies:**
+    ```bash
+    npm install
     ```
-    API_KEY=your_google_gemini_api_key
-    ```
-    *Note: In this application's environment, `process.env.API_KEY` is pre-configured.*
 
-3.  **Run the application:**
-    Open the `index.html` file in your browser to start the application.
+3.  **Set up environment variables:**
+    You will need a Google Gemini API key from [Google AI Studio](https://makersuite.google.com/app/apikey). Create a file named `.env.local` in the root of the project and add your key:
+    ```
+    GEMINI_API_KEY=your_google_gemini_api_key
+    ```
+
+4.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
+    The application will be available at `http://localhost:5173`
+
+5.  **Get a GitHub Personal Access Token:**
+    Follow the instructions in the app to create a token with `repo` scope from [GitHub Settings](https://github.com/settings/tokens/new).
