@@ -1,57 +1,110 @@
-# GitHub Repo Describer
+<h1 align="center">GitHub Repo Describer</h1>
+<h3 align="center">AI-powered repository description generator</h3>
 
-An intelligent tool designed to streamline your repository management. This application automatically identifies your GitHub repositories that are missing a description, uses the Google Gemini AI to generate a concise and relevant summary from the `README.md` file, and allows you to update it directly on GitHub with a single click.
+<p align="center">
+  <em>Auto-generate descriptions for repos missing them using Gemini AI</em>
+</p>
 
-![GitHub Repo Describer Screenshot](https://storage.googleapis.com/proudcity-prod-bucket-1/uploads/2024/05/92a832f0-github-repo-describer-screenshot.png)
+<p align="center">
+  <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Gemini_AI-4285F4?style=flat-square&logo=google&logoColor=white" alt="Gemini AI" />
+</p>
 
-## ✨ Features
+<p align="center">
+  :gb: <a href="#english">English</a> | :it: <a href="#italiano">Italiano</a>
+</p>
 
-- **Secure Authentication**: Connects to your GitHub account securely using a Personal Access Token (PAT) with `repo` scope.
-- **Automatic Repository Discovery**: Fetches and displays a list of your public, non-forked repositories that currently lack a description.
-- **AI-Powered Generation**: Leverages the Google Gemini API to analyze the content of your `README.md` file and generate a high-quality, one-sentence description.
-- **One-Click Updates**: Seamlessly push the generated description directly to your repository on GitHub, eliminating manual copy-pasting.
-- **Real-Time Feedback**: The UI updates instantly, removing repositories from the list as you update them.
-- **Clean & Responsive UI**: A modern, easy-to-use interface built with React and Tailwind CSS.
+---
 
-## 🚀 How It Works
+## Overview
 
-1.  **Authorize**: Provide a GitHub Personal Access Token with the `repo` scope to grant the application the necessary permissions.
-2.  **Fetch Repos**: The app automatically fetches your repositories and filters for those without descriptions.
-3.  **Generate**: For any repository in the list, click "Generate Description". The app reads the `README.md` and asks the Gemini AI to summarize it.
-4.  **Review & Update**: Review the AI-generated description. If you like it, click "Update on GitHub" to apply it to your repository instantly.
+<!-- ![GitHub Repo Describer Overview](assets/repo-describer-overview.png) -->
 
-## 🛠️ Tech Stack
+---
 
-- **Frontend**: React, TypeScript, Tailwind CSS
-- **AI**: Google Gemini API (`gemini-2.5-flash`)
-- **API**: GitHub REST API
+<a name="english"></a>
+## :gb: English
 
-## ⚙️ Local Setup
+### What is GitHub Repo Describer?
 
-To run this project locally, follow these steps:
+An intelligent tool that identifies your GitHub repos missing a description, uses **Gemini AI** to generate a summary from the README, and lets you update it with one click.
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/fracabu/github-repo-describer.git
-    cd github-repo-describer
-    ```
+### Features
 
-2.  **Install dependencies:**
-    ```bash
-    npm install
-    ```
+- **Secure Authentication**: GitHub PAT with `repo` scope
+- **Auto Discovery**: Finds repos without descriptions
+- **AI-Powered**: Gemini analyzes README and generates descriptions
+- **One-Click Update**: Push directly to GitHub
+- **Real-Time UI**: Removes updated repos from list
 
-3.  **Set up environment variables:**
-    You will need a Google Gemini API key from [Google AI Studio](https://makersuite.google.com/app/apikey). Create a file named `.env.local` in the root of the project and add your key:
-    ```
-    GEMINI_API_KEY=your_google_gemini_api_key
-    ```
+### How It Works
 
-4.  **Start the development server:**
-    ```bash
-    npm run dev
-    ```
-    The application will be available at `http://localhost:5173`
+1. Authorize with GitHub PAT
+2. App fetches repos without descriptions
+3. Click "Generate Description" - AI reads README
+4. Review and click "Update on GitHub"
 
-5.  **Get a GitHub Personal Access Token:**
-    Follow the instructions in the app to create a token with `repo` scope from [GitHub Settings](https://github.com/settings/tokens/new).
+### Quick Start
+
+```bash
+git clone https://github.com/fracabu/github-repo-describer.git
+cd github-repo-describer
+npm install
+
+# Add GEMINI_API_KEY to .env.local
+npm run dev
+```
+
+---
+
+<a name="italiano"></a>
+## :it: Italiano
+
+### Cos'e GitHub Repo Describer?
+
+Uno strumento intelligente che identifica le tue repo GitHub senza descrizione, usa **Gemini AI** per generare un riassunto dal README, e ti permette di aggiornarlo con un click.
+
+### Funzionalita
+
+- **Autenticazione Sicura**: GitHub PAT con scope `repo`
+- **Scoperta Automatica**: Trova repo senza descrizioni
+- **AI-Powered**: Gemini analizza il README e genera descrizioni
+- **Aggiornamento One-Click**: Push diretto su GitHub
+- **UI Real-Time**: Rimuove le repo aggiornate dalla lista
+
+### Come Funziona
+
+1. Autorizza con GitHub PAT
+2. L'app recupera le repo senza descrizione
+3. Clicca "Genera Descrizione" - l'AI legge il README
+4. Rivedi e clicca "Aggiorna su GitHub"
+
+### Quick Start
+
+```bash
+git clone https://github.com/fracabu/github-repo-describer.git
+cd github-repo-describer
+npm install
+
+# Aggiungi GEMINI_API_KEY a .env.local
+npm run dev
+```
+
+---
+
+## Tech Stack
+
+React, TypeScript, Tailwind CSS, Google Gemini API, GitHub REST API
+
+## License
+
+MIT
+
+---
+
+<p align="center">
+  <a href="https://github.com/fracabu">
+    <img src="https://img.shields.io/badge/Made_by-fracabu-8B5CF6?style=flat-square" alt="Made by fracabu" />
+  </a>
+</p>
